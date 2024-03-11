@@ -45,7 +45,7 @@ public class ClassPathXmlApplicationContext {
         }
     }
 
-    public Object getBean(String id) {
-        return singletonMap.get(id);
+    public Object getBean(String beanName) {
+        return singletonMap.get(beanName);
     }
 }
