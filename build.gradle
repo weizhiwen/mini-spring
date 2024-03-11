@@ -15,7 +15,7 @@ repositories {
 
 dependencies {
     implementation 'org.dom4j:dom4j:+'
-    implementation 'org.junit.jupiter:junit-jupiter-api:+'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:+'
 }
 
 tasks.named('test') {
