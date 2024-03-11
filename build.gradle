@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.shixin'
+version = '0.0.1'
+
+java {
+    sourceCompatibility = '17'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
