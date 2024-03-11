@@ -1,5 +1,7 @@
 package com.shixin.spring;
 
+import com.shixin.spring.beans.BeansException;
+import com.shixin.spring.context.ClassPathXmlApplicationContext;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -12,7 +14,7 @@ class TestClassPathXmlApplicationContext {
     private AService aService;
 
     @BeforeEach
-    void beforeEach() {
+    void beforeEach() throws BeansException {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
         aService = (AService) context.getBean("aService");
     }

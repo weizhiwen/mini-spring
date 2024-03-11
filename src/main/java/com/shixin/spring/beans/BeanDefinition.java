@@ -1,4 +1,4 @@
-package com.shixin.spring;
+package com.shixin.spring.beans;
 
 import java.io.Serializable;
 
