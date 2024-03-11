@@ -19,7 +19,7 @@ class TestClassPathXmlApplicationContext {
 
     @Test
     @DisplayName("应该得到非null的bean")
-    void shouldGetBeanNoNull() {
+    void shouldGetNoNullBean() {
         assertNotNull(aService);
     }
 
