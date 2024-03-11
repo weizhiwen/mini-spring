@@ -1,5 +1,6 @@
 package com.shixin.spring;
 
+import com.shixin.spring.beans.BeanDefinition;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
@@ -23,7 +24,7 @@ public class ClassPathXmlApplicationContext {
         try {
             URL xmlPath = getClass().getClassLoader().getResource(fileName);
             document = saxReader.read(xmlPath);
-        } catch (DocumentException e) {
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
         Element rootElement = document.getRootElement();
