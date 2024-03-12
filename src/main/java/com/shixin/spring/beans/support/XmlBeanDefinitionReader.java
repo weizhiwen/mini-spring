@@ -7,7 +7,7 @@ import org.dom4j.Element;
 
 public class XmlBeanDefinitionReader {
     public static final String ID = "id";
-    public static final String CLASS_PATH = "class";
+    public static final String CLASS_NAME = "class";
 
     BeanFactory beanFactory;
 
@@ -19,7 +19,7 @@ public class XmlBeanDefinitionReader {
         while (resource.hasNext()) {
             Element element = (Element) resource.next();
             String id = element.attributeValue(ID);
-            String className = element.attributeValue(CLASS_PATH);
+            String className = element.attributeValue(CLASS_NAME);
             BeanDefinition beanDefinition = new BeanDefinition(id, className);
             beanFactory.registerBeanDefinition(beanDefinition);
         }

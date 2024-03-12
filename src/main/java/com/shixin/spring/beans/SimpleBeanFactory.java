@@ -19,7 +19,7 @@ public class SimpleBeanFactory implements BeanFactory {
         }
         BeanDefinition beanDefinition = beanDefinitionMap.get(beanName);
         try {
-            singleton = Class.forName(beanDefinition.getClassPath()).newInstance();
+            singleton = Class.forName(beanDefinition.getClassName()).newInstance();
         } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }

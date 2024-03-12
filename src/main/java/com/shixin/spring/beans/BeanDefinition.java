@@ -7,11 +7,11 @@ public class BeanDefinition implements Serializable {
 
     private String id;
 
-    private String classPath;
+    private String className;
 
-    public BeanDefinition(String id, String classPath) {
+    public BeanDefinition(String id, String className) {
         this.id = id;
-        this.classPath = classPath;
+        this.className = className;
     }
 
     public String getId() {
@@ -22,11 +22,11 @@ public class BeanDefinition implements Serializable {
         this.id = id;
     }
 
-    public String getClassPath() {
-        return classPath;
+    public String getClassName() {
+        return className;
     }
 
-    public void setClassPath(String classPath) {
-        this.classPath = classPath;
+    public void setClassName(String className) {
+        this.className = className;
     }
 }
